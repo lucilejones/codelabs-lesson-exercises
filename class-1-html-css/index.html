@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .header {
+            background-color: seashell;
+            padding: 15px;
+        }
+        .heading {
+            /* color: white; */
+            color:black;
+        }
+
+        .paragraph {
+          margin-bottom: -100px;
+          z-index: 1;
+          position: relative;
+        }
+
+        img {
+            /* margin-top: 10px; Add a margin to the top of the image to create space */
+            margin-top: 200px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: purple;
+        }
+
+        a:hover {
+            color: teal;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1>My First Web Page</h1>
+    <p>Welcome to the world of HTML!</p>
+    <img src="example.jpg" alt="Example Image"> -->
+    <header class="header">
+        <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+    <h1 class="heading">This is a Heading</h1>
+    <p class="paragraph">This is a paragraph.</p>
+    <img src="https://www.techrepublic.com/wp-content/uploads/2022/08/learn-coding-automation-just-770x513.jpeg" alt="Example Image">
+      <div>
+        <form>
+            <label for="name">Name: </label>
+            <input
+                type="text"
+                name="name"
+            >
+            <br>
+            <label for="gender">Gender: </label>
+            <input type="radio">Male
+            <input type="radio">Female
+            <input type="radio">Non-binary
+            <input type="radio">Prefer not to say
+            <br>
+            <label for="country">Country: </label>
+            <select name="country" id="country">
+                <option value="united-states">United States</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+            >
+            <label for="terms">I accept the terms and conditions.</label>
+            <br>
+            <button>Submit</button>
+        </form>
+      </div>
+
+</body>
+</html>
