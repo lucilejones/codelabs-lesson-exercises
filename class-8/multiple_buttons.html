@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Buttons DOM Exercise</title>
+</head>
+<body>
+    <button class="btn_onclick" data-color="teal">Button 1</button>
+    <button class="btn_onclick" data-color="grey">Button 2</button>
+    <button class="btn_onclick" data-color="aqua">Button 3</button>
+
+    <input type="text" id="textInput" />
+    <p id="textDisplay"></p>
+
+
+    <script>
+        const buttons = document.querySelectorAll('.btn_onclick');
+        buttons.forEach((button) => {
+            
+            button.addEventListener("click", (e) => {
+                const color = e.target.getAttribute('data-color');
+                document.body.style.backgroundColor = color;
+            })
+        })
+
+        const clickMeButton = document.createElement('button');
+        clickMeButton.innerText = 'Click Me';
+        clickMeButton.addEventListener('click', () => {
+            alert('Button was clicked!')
+        })
+        document.body.append(clickMeButton);
+
+        const input = document.querySelector('#textInput');
+
+        // here, using keyup instead of keydown updates the input.value after the key is pressed
+        // so the display is always the same as the input box, rather than being a character behind
+        // (which is what it did with keydown)
+        input.addEventListener('keyup', (e) => {
+            console.log(e.key);
+            textDisplay.innerHTML = input.value;
+        })
+        const textDisplay = document.querySelector('#textDisplay');
+ 
+        
+
+    </script>
+</body>
+</html>
